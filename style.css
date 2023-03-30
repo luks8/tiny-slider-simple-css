@@ -1,0 +1,200 @@
+/* 
+CSS per tiny-slider 
+https://github.com/ganlanyuan/tiny-slider
+
+*/
+
+body {
+    background-color: #fafafa;
+}
+ 
+/* ### Struttura di tiny-slider ### */
+.slider-container {    
+    padding: 2rem 3rem;
+    margin: 2rem auto 0 auto;
+    overflow: hidden;
+    border-radius: 5px;    
+    position:relative;
+}
+.my-slider {
+    display: flex;
+    position: relative;    
+}
+ 
+.slider-item {
+    padding: 1.5rem .75rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.controls {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;    
+    background: transparent;
+    width: 100%;    
+    top: 50%;
+    transform: translatey(-50%);
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+}
+.tns-nav{
+    text-align: center;
+    margin: 10px 0;
+}
+.tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #c5c5c5;
+    border: 0;
+}
+.controls-btn{
+    color: black;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* ### Struttura della card ### */
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.card-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.card-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ### Elements state ### */
+.controls:focus, 
+.tns-nav:focus-visible{
+    outline: none;
+}
+.controls li:hover{
+    cursor: pointer; 
+}
+.controls li:focus-visible{
+    outline: none; 
+}
+.tns-nav > .tns-nav-active {
+    background: black
+}
+.slider-item:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.card-btn:hover {
+    background-color: #555;
+}
+.card-btn:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52,58,64,.5);
+}
+.tns-nav button:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52,58,64,.5);
+}
+.controls-btn:hover{
+    color: #555;
+}
+
+
+/* 
+
+### Struttura html per far funzionare correttamente tiny-slider con questo CSS ###
+
+<div class="slider-container">
+    <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-left fa-3x"></i>
+        </li>
+        <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-right fa-3x"></i>          
+        </li>
+    </ul>
+
+    <div class="my-slider">
+        <div class="slider-item">
+            <div class="card">
+                <!-- ###CONTENT### -->     
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- *** CDN *** -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.3.11/tiny-slider.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+
+<!-- ***Per istanziare lo slider*** --> 
+
+<script>
+        const slider = tns({
+            container: '.my-slider',
+            loop: false,
+            items: 1,
+            slideBy: 'page',
+            nav: true,
+            navPosition: 'bottom', 
+            autoplay: false,
+            speed: 400,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            // lazyload: true,
+            controlsContainer: "#customize-controls",
+            responsive: {
+                640: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+                1200: {
+                    items: 3,
+                }
+            }
+
+        });
+    </script>
+
+*/
