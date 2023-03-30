@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+</head>
+<body>
+    <div class="slider-container">
+        <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+            <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <button class="controls-btn">
+                    <i class="fas fa-angle-left fa-3x"></i>
+                </button>
+            </li>
+            <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <button class="controls-btn">
+                    <i class="fas fa-angle-right fa-3x"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="my-slider">
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="card">
+                <img src="https://picsum.photos/400/300" alt="Card Image">
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus risus. Aliquam erat volutpat.</p>
+                        <button class="card-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script>
+        const slider = tns({
+            container: '.my-slider',
+            loop: false,
+            items: 1,
+            slideBy: 'page',
+            nav: true,
+            navPosition: 'bottom', 
+            autoplay: false,
+            speed: 400,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            // lazyload: true,
+            controlsContainer: "#customize-controls",
+            responsive: {
+                640: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+                1200: {
+                    items: 3,
+                }
+            }
+
+        });
+    </script>
+
+</body>
+</html>
+
+
+
